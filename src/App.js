@@ -14,7 +14,7 @@ class App extends React.Component {
     highscore: 0
   };
 
-  gameOver = () => {
+  loseGame = () => {
     if (this.state.score > this.state.highscore) {
       this.setState({highscore: this.state.score}, function() {
         console.log(this.state.highscore);
@@ -40,16 +40,16 @@ class App extends React.Component {
           this.state.characters.sort(() => Math.random() - 0.5)
           return true;
         } else {
-          this.gameOver();
+          this.loseGame();
         }
       }
     });
   }
-  // Map over this.state.characters and render a cardCard component for each card object
+
   render() {
     return (
       <Wrapper>
-        <Container score={this.state.score} highscore={this.state.highscore}>Clicky Game</Container>
+        <Container score={this.state.score} highscore={this.state.highscore}>Avengers Memory Game</Container>
         {this.state.characters.map(card => (
           <Card
             id={card.id}
