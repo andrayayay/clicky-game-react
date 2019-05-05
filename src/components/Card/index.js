@@ -1,12 +1,12 @@
-import React from "react";
-import "./style.css"
- 
-function imageCard(props){
-  return (
-    <div className="image">
-      <img alt={props.name} src={props.image}/>
+import React from 'react'
+import './style.css'
+
+const Card = props => (
+  <div className="card" onClick={() => props.clickCount(props.id)}>
+    <div className="img-container">
+      <img alt={props.name} src={props.image} />
     </div>
-  )
-}
-  export default imageCard;
-  
+  </div>
+);
+
+export default Card
