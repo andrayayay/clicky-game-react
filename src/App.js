@@ -7,14 +7,16 @@ import characters from '../src/characters.json';
 
 
 class App extends React.Component {
-  // Setting this.state.characters to the characters json array
+  // declaring which variables will change
   state = {
     characters,
     score: 0,
     highscore: 0
   };
 
+// losing the game 
   loseGame = () => {
+    // setting the high score 
     if (this.state.score > this.state.highscore) {
       this.setState({highscore: this.state.score}, function() {
         console.log(this.state.highscore);

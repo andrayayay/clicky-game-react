@@ -1,12 +1,12 @@
 import React from "react";
 import "./style.css";
 
-function Footer (){
-    return (
-        <footer className="footer">
-            <span>Clicky Game 2019 By Andraya Smith</span>
-        </footer>
-    );
-}
+const Footer = props => (
+    <div class="jumbotron jumbotron-fluid text-center">
+    <div class="container">
+        <h1 class="lead">Andraya Mae Smith 2019</h1>
+    </div>
+</div>
+)
 
 export default Footer;
